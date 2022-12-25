@@ -1,7 +1,10 @@
 import axios from 'axios';
 import { useState, useEffect, useContext } from 'react';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
+import RegistrationForm from './pages/RegistrationForm';
+import PageNotFound from './pages/PageNotFound';
 
 function App() {
     const [issues, setIssues] = useState([]);
@@ -19,8 +22,18 @@ function App() {
 
 
   return (
+
     <div className="App">
-      <Header />
+        <BrowserRouter>
+            <Header />
+            <main>
+                <Routes>
+                    <Route path='/' element= {<RegistrationForm />} />
+                    <Route path="*" element={<PageNotFound />} />
+                </Routes>
+            </main>
+        </BrowserRouter>
+      
     </div>
   );
 }
