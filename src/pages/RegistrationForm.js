@@ -1,5 +1,6 @@
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import { Container } from 'react-bootstrap';
 import { useState, useContext, useEffect } from 'react';
 
 export default function RegistrationForm() {
@@ -7,6 +8,7 @@ export default function RegistrationForm() {
 
 
     return (
+        <Container>
         <Form>
             <Form.Group className="mb-3" controlId="formUsername">
                 <Form.Label>Username</Form.Label>
@@ -24,5 +26,6 @@ export default function RegistrationForm() {
             </Form.Group>
             <Button variant="primary" type="submit">Submit</Button>
         </Form>
+        </Container>
     )
 }

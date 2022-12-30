@@ -11,8 +11,7 @@ function Header() {
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Backlog</Nav.Link>
-            <Nav.Link href="#link">Sprint</Nav.Link>
+            <Nav.Link href="#home">Board</Nav.Link>
             <NavDropdown title="Issues" id="nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
@@ -24,6 +23,7 @@ function Header() {
                 Separated link
               </NavDropdown.Item>
             </NavDropdown>
+            <Nav.Link href="#link">Backlog</Nav.Link>            
           </Nav>
         </Navbar.Collapse>
       </Container>

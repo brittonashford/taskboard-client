@@ -3,7 +3,8 @@ import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-export default function Task({ id, title, body, onDragStart }) {
+export default function Issue({ issueId, title, type, priority, status, description, submittedBy, assignedTo, onDragStart}) {
+
 
     return (
         // <Card style={{ width: '18rem' }}>
@@ -35,12 +36,20 @@ export default function Task({ id, title, body, onDragStart }) {
         //     </Card.Body>
         // </Card>
 
-        <div className="task-wrapper"
+        <div className="issue-wrapper"
             draggable
-            onDragStart={(e) => onDragStart(e, id)}
+            onDragStart={(e) => onDragStart(e, issueId)}
         >
-            <h3 className="task-title">{title}</h3>
-            <p>{body}</p>
+            <h5 className="issue-title">{title}</h5>
+            <span>Id: {issueId}</span>
+            <br />
+            <span>type: {type}</span>
+            <br />
+            <span>priority: {priority}</span>
+            <br />
+            <span>status: {status}</span>
         </div>
     )
 }
+
+

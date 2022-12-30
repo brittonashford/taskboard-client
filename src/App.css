@@ -53,12 +53,12 @@
 
 
 /*TASK*/
-.task-title {
+.issue-title {
     width: 100%;
     margin: 0;
 }
 
-.task-wrapper {
+.issue-wrapper {
     background: rgba(61,60,79, .2);
     padding: 20px;
     border-radius: 20px;
