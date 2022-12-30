@@ -3,6 +3,6 @@
 export default function PageNotFound() {
 
     return (
-        <h1>Page Not Found Test</h1>
+        <h1>Page Not Found</h1>
     )
 }
